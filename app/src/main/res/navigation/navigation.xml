@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ru.asselinux.banknotestest.ui.SplashFragment"
+        android:label="Hello"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_start_fragment"
+            app:destination="@id/startFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="ru.asselinux.banknotestest.ui.StartFragment"
+        android:label="Выберите операцию"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_get_cash_fragment"
+            app:destination="@id/getCashFragment" />
+        <action
+            android:id="@+id/action_get_balance"
+            app:destination="@id/balanceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/getCashFragment"
+        android:name="ru.asselinux.banknotestest.ui.GetCashFragment"
+        android:label="Снять наличные"
+        tools:layout="@layout/fragment_get_cash">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="ru.asselinux.banknotestest.ui.BalanceFragment"
+        android:label="Узнать баланс"
+        tools:layout="@layout/fragment_balance">
+
+    </fragment>
+
+</navigation>

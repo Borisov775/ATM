@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.GetCashFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Выберите сумму в рублях"
+            android:id="@+id/choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintHorizontal_bias="0.523" />
+        <Button
+            android:text="Отмена"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/choose"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="Введите сумму в рублях"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textView"/>
+
+        <TextView
+            android:text="Доступные варианты"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:gravity="start"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:id="@+id/radioGroup"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+            <RadioButton
+                android:text="50 RUB"
+                android:layout_width="wrap_content"
+                android:onClick="@{()->viewModel.setAmount(String.valueOf(10000))}"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton1"
+                android:textSize="24sp"/>
+            <RadioButton
+                android:text="100 RUB"
+                android:textSize="24sp"
+                android:onClick="@{()->viewModel.setAmount(String.valueOf(5000))}"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2"/>
+
+            <RadioButton
+                android:text="200 RUB"
+                android:layout_marginTop="16dp"
+                android:onClick="@{()->viewModel.setAmount(String.valueOf(2000))}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton3"
+                android:textSize="24sp"/>
+            <RadioButton
+                android:text="500 RUB"
+                android:textSize="24sp"
+                android:onClick="@{()->viewModel.setAmount(`other`)}"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton5"/>
+            <RadioButton
+                android:text="1000 RUB"
+                android:textSize="24sp"
+                android:onClick="@{()->viewModel.setAmount(`other`)}"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton6"/>
+            <RadioButton
+                android:text="5000 RUB"
+                android:textSize="24sp"
+                android:onClick="@{()->viewModel.setAmount(`other`)}"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton7"/>
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
