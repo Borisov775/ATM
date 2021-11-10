@@ -13,7 +13,6 @@
         <action
             android:id="@+id/action_start_fragment"
             app:destination="@id/startFragment" />
-
     </fragment>
 
     <fragment
@@ -33,9 +32,10 @@
         android:id="@+id/getCashFragment"
         android:name="ru.asselinux.banknotestest.ui.GetCashFragment"
         android:label="Снять наличные"
-        tools:layout="@layout/fragment_get_cash">
-
-
+        tools:layout="@layout/fragment_choose_currency">
+        <action
+            android:id="@+id/action_getCashFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
@@ -43,7 +43,15 @@
         android:name="ru.asselinux.banknotestest.ui.BalanceFragment"
         android:label="Узнать баланс"
         tools:layout="@layout/fragment_balance">
-
     </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="ru.asselinux.banknotestest.ui.DetailsFragment"
+        android:label="Снять деньги"
+        tools:layout="@layout/fragment_details">
+    </fragment>
+
+
 
 </navigation>

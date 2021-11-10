@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageCurrency"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/image_currency" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="32sp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/currency"
+        tools:text="@tools:sample/cities"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="72dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:contentDescription="@string/image_arrow" />
+
+</LinearLayout>
