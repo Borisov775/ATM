@@ -15,50 +15,36 @@
             android:id="@+id/balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"
             android:text="Баланс:"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/title"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:layout_marginTop="16dp"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.984"
             app:layout_constraintStart_toEndOf="@+id/currency"
             app:layout_constraintTop_toBottomOf="@+id/balance"
-            app:layout_constraintVertical_bias="0.0"
             tools:text="@tools:sample/cities" />
-
-        <ImageView
-            android:id="@+id/imageCurrency"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/avatar"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:gravity="start"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageCurrency"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/cities" />
 
@@ -66,13 +52,13 @@
             android:id="@+id/currency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:gravity="start"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-            app:layout_constraintStart_toEndOf="@+id/imageCurrency"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title"
             app:layout_constraintVertical_bias="0.0"
             tools:text="@tools:sample/cities" />
@@ -81,11 +67,11 @@
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:gravity="start"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.198"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageCurrency">
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <RadioButton
                 android:id="@+id/optionOne"
@@ -157,7 +143,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnGetCash" />
+            app:layout_constraintTop_toBottomOf="@+id/btnGetCash"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

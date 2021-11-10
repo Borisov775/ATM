@@ -58,10 +58,6 @@ class BanknotesAdapter(
     }
 }
 
-private val RecyclerView.ViewHolder.context
-    get() = this.itemView.context
-
-
 interface Transaction {
     fun passData(position: Int, name: String, image: Int)
 }

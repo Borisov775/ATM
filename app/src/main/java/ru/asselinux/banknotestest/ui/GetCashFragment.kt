@@ -7,7 +7,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_choose_currency.*
 import ru.asselinux.banknotestest.R
 import ru.asselinux.banknotestest.adapter.*
 import ru.asselinux.banknotestest.data.Banknote
@@ -38,18 +37,16 @@ class GetCashFragment : Fragment(R.layout.fragment_choose_currency), Transaction
         val originalData: List<Banknote> = DataStorage.getBanknotesList()
         val shuffledList: List<Banknote> = DataStorage.getBanknotesList()
         adapter.bindBanknotes(shuffledList)
-        /* Update adapter */
+
         val diffCallback = BanknoteDiffUtilCallbackSolution(originalData, shuffledList)
         val diffResult: DiffUtil.DiffResult = DiffUtil.calculateDiff(diffCallback)
         diffResult.dispatchUpdatesTo(adapter)
     }
 
     override fun passData(position: Int, name: String, image: Int) {
-        val bundle = Bundle()
-        bundle.putInt("input_pos", position)
-        bundle.putString("input_name", name)
-        bundle.putInt("input_image", image)
-
-        findNavController().navigate(R.id.action_getCashFragment_to_detailsFragment)
+        val text = "Выберете сумму в евро"
+        val action = GetCashFragmentDirections.actionGetCashFragmentToDetailsFragment(text)
+        findNavController().navigate(action)
     }
 }
+

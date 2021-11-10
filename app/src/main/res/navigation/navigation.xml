@@ -50,6 +50,9 @@
         android:name="ru.asselinux.banknotestest.ui.DetailsFragment"
         android:label="Снять деньги"
         tools:layout="@layout/fragment_details">
+        <argument
+            android:name="cash"
+            android:defaultValue="Hello, Android!" />
     </fragment>
 
 
