@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/tvChooseOperation"
@@ -18,24 +18,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/choose_action"
-        android:textSize="32sp"/>
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/btnGetCash"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
-        android:textSize="16sp"
+        android:backgroundTint="#0A80F5"
         android:text="@string/get_cash"
-        android:backgroundTint="#0A80F5"/>
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/btnGetBalance"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
-        android:textSize="16sp"
+        android:backgroundTint="#0A80F5"
         android:text="@string/get_balance"
-        android:backgroundTint="#0A80F5"/>
+        android:textSize="16sp" />
 
 </LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BanknotesTest</string>
+    <string name="app_name">Magic Money Test</string>
     <string name="image_currency">image_currency</string>
     <string name="image_arrow">image_arrow</string>
     <string name="avatar">image_currency</string>
@@ -14,4 +14,5 @@
     <string name="loading">Считаем деньги</string>
     <string name="string_show_balance">Текущий баланс:</string>
     <string name="string_ruble">100000.0 рублей</string>
+    <string name="btn_back">Назад</string>
 </resources>

@@ -38,6 +38,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
 
     private fun openProgressDialog() {
         ProgressDialog().show(
-            childFragmentManager, ProgressDialog.TAG)
+            childFragmentManager, ProgressDialog.TAG
+        )
     }
 }
