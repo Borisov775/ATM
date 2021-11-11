@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/drawable/shape_button_rounded.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2546875" />
         <entry key="app/src/main/res/layout/card_pertanyaan.xml" value="0.26875" />
-        <entry key="app/src/main/res/layout/fragment_balance.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/fragment_balance.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_choose.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/fragment_choose_currency.xml" value="0.26461538461538464" />
         <entry key="app/src/main/res/layout/fragment_currency_details.xml" value="0.335" />
