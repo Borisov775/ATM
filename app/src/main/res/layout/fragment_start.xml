@@ -7,25 +7,35 @@
     android:orientation="vertical"
     tools:context=".ui.StartFragment">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"/>
+
     <TextView
         android:id="@+id/tvChooseOperation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Выберите операцию"
-        android:textSize="18sp" />
+        android:layout_marginTop="24dp"
+        android:text="@string/choose_action"
+        android:textSize="32sp"/>
 
     <Button
         android:id="@+id/btnGetCash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Выдача наличных" />
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        android:text="@string/get_cash"
+        android:backgroundTint="#0A80F5"/>
 
     <Button
         android:id="@+id/btnGetBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Узнать баланс"/>
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/get_balance"
+        android:backgroundTint="#0A80F5"/>
 
 </LinearLayout>

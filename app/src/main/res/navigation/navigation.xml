@@ -42,8 +42,7 @@
         android:id="@+id/balanceFragment"
         android:name="ru.asselinux.banknotestest.ui.BalanceFragment"
         android:label="Узнать баланс"
-        tools:layout="@layout/fragment_balance">
-    </fragment>
+        tools:layout="@layout/fragment_balance"/>
 
     <fragment
         android:id="@+id/detailsFragment"
@@ -52,9 +51,13 @@
         tools:layout="@layout/fragment_details">
         <argument
             android:name="cash"
-            android:defaultValue="Hello, Android!" />
+            app:argType="ru.asselinux.banknotestest.data.Banknote" />
     </fragment>
 
-
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="ru.asselinux.banknotestest.ui.dialog.ProgressDialog"
+        android:label="Загрузка"
+        tools:layout="@layout/progress_dialog"/>
 
 </navigation>

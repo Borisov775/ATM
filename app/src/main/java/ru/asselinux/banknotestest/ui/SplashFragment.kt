@@ -11,7 +11,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         super.onViewCreated(view, savedInstanceState)
 
         view.postDelayed({
-                         findNavController().navigate(R.id.action_start_fragment)
+            findNavController().navigate(R.id.action_start_fragment)
         }, 2000)
     }
 }

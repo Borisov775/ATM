@@ -48,16 +48,12 @@ class BanknotesAdapter(
         }
 
         override fun onClick(v: View?) {
-            val position = adapterPosition
-            val image = money[adapterPosition].imageCurrency
-            val name = money[adapterPosition].currency
-            if (position != RecyclerView.NO_POSITION) {
-                listener.passData(position, name, image)
-            }
+            val position = bindingAdapterPosition
+            listener.passData(money[position])
         }
     }
 }
 
 interface Transaction {
-    fun passData(position: Int, name: String, image: Int)
+    fun passData(banknote: Banknote)
 }

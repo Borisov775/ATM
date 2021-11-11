@@ -3,4 +3,13 @@
     <string name="image_currency">image_currency</string>
     <string name="image_arrow">image_arrow</string>
     <string name="avatar">image_currency</string>
+    <string name="magic_money">Magic Money</string>
+    <string name="choose_action">Выберите операцию</string>
+    <string name="get_cash">Выдача наличных</string>
+    <string name="get_balance">Узнать баланс</string>
+    <string name="choose_currency">Выберите валюту:</string>
+    <string name="balance_info">Баланс:</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_get">Получить</string>
+    <string name="loading">Считаем деньги</string>
 </resources>

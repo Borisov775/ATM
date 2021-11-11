@@ -1,5 +1,6 @@
 package ru.asselinux.banknotestest.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -28,6 +29,7 @@ class GetCashFragment : Fragment(R.layout.fragment_choose_currency), Transaction
         updateData()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun updateData() {
         adapter.bindBanknotes(DataStorage.getBanknotesList())
         adapter.notifyDataSetChanged()
@@ -43,9 +45,9 @@ class GetCashFragment : Fragment(R.layout.fragment_choose_currency), Transaction
         diffResult.dispatchUpdatesTo(adapter)
     }
 
-    override fun passData(position: Int, name: String, image: Int) {
-        val text = "Выберете сумму в евро"
-        val action = GetCashFragmentDirections.actionGetCashFragmentToDetailsFragment(text)
+    override fun passData(banknote: Banknote) {
+        val action = GetCashFragmentDirections
+            .actionGetCashFragmentToDetailsFragment(banknote)
         findNavController().navigate(action)
     }
 }

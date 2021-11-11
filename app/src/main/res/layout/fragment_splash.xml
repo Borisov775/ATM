@@ -2,14 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
     tools:context=".ui.SplashFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="72sp"
-        android:text="здесь будет заставка"/>
+        android:id="@+id/pm_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/magic_money"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="48sp"/>
 
 </LinearLayout>

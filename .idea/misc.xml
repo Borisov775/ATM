@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.2805128205128205" />
+        <entry key="app/src/main/res/drawable/ic_bg.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/drawable/shape_button_rounded.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2546875" />
         <entry key="app/src/main/res/layout/card_pertanyaan.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/fragment_balance.xml" value="0.140625" />
@@ -15,6 +17,7 @@
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/fragment_start.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/item_currency.xml" value="0.26875" />
+        <entry key="app/src/main/res/layout/progress_dialog.xml" value="0.26875" />
       </map>
     </option>
   </component>
