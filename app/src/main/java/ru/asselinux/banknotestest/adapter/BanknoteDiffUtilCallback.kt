@@ -3,7 +3,7 @@ package ru.asselinux.banknotestest.adapter
 import androidx.recyclerview.widget.DiffUtil
 import ru.asselinux.banknotestest.data.Banknote
 
-class BanknoteDiffUtilCallbackSolution(
+class BanknoteDiffUtilCallback(
     private val oldList: List<Banknote>,
     private val newList: List<Banknote>
 ) : DiffUtil.Callback() {

@@ -18,8 +18,8 @@ class GetCashFragment : Fragment(R.layout.fragment_choose_currency), Transaction
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val recycler: RecyclerView = view.findViewById(R.id.banknoteList)
-        val versions = DataStorage.getBanknotesList()
-        adapter = BanknotesAdapter(versions, this@GetCashFragment)
+        val getBanknote = DataStorage.getBanknotesList()
+        adapter = BanknotesAdapter(getBanknote, this@GetCashFragment)
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = adapter
     }
@@ -40,7 +40,7 @@ class GetCashFragment : Fragment(R.layout.fragment_choose_currency), Transaction
         val shuffledList: List<Banknote> = DataStorage.getBanknotesList()
         adapter.bindBanknotes(shuffledList)
 
-        val diffCallback = BanknoteDiffUtilCallbackSolution(originalData, shuffledList)
+        val diffCallback = BanknoteDiffUtilCallback(originalData, shuffledList)
         val diffResult: DiffUtil.DiffResult = DiffUtil.calculateDiff(diffCallback)
         diffResult.dispatchUpdatesTo(adapter)
     }
