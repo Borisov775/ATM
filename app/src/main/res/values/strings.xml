@@ -19,4 +19,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="witdraw_optionsQ">Choose the type of note you want to withdraw a cash: </string>
     <string name="check_cash_1">Операция завершена </string>
+    <string name="sum_to_withdraw">Выбранная сумма для снятия</string>
 </resources>

@@ -3,7 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <TextView
+        android:id="@+id/quoteForSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sum_to_withdraw"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        app:layout_constraintTop_toBottomOf="@id/quoteForSum"
+        app:layout_constraintLeft_toLeftOf="@id/quoteForSum"
+        app:layout_constraintRight_toRightOf="@id/quoteForSum"
+        android:textColor="@color/light_blue_900"
+        android:textSize="50sp"/>
     <TextView
         android:id="@+id/withdrawQuote"
         android:layout_width="wrap_content"
