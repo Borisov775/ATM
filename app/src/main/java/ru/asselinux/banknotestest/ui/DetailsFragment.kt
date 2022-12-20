@@ -14,6 +14,7 @@ import ru.asselinux.banknotestest.ui.dialog.ProgressDialog
 
 class DetailsFragment : Fragment(R.layout.fragment_details),Transaction {
     var radioOption:Int=0
+    var currencyCharacter:String=""
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val title: TextView = view.findViewById(R.id.title)
@@ -22,6 +23,15 @@ class DetailsFragment : Fragment(R.layout.fragment_details),Transaction {
         val args: DetailsFragmentArgs by navArgs()
 
         title.text = args.cash.title
+        when(args.cash.currency){
+            "EUR"-> currencyCharacter="€"
+            "USD"->currencyCharacter="$"
+            "RUB"->currencyCharacter="₽"
+            "WTF"->currencyCharacter="WTF"
+        }
+
+
+
 
         view.findViewById<TextView>(R.id.title).text = args.cash.title
         view.findViewById<RadioButton>(R.id.radio_1).text = args.cash.optionOne.toString()
@@ -38,52 +48,56 @@ class DetailsFragment : Fragment(R.layout.fragment_details),Transaction {
             val selectedRadioButton:Int=radioGroup.checkedRadioButtonId
             when (selectedRadioButton) {
                 R.id.radio_1 -> {
-                    radioOption = 5
+                    radioOption = args.cash.optionOne
                     Toast.makeText(requireActivity(), "Вы выбрали ${radioOption} ${args.cash.title.substring(16)}", Toast.LENGTH_SHORT)
                         .show()
                 }
                 R.id.radio_2->
                      {
-                        radioOption=10
+                        radioOption=args.cash.optionTwo
                         Toast.makeText(requireActivity(),"Вы выбрали ${radioOption} ${args.cash.title.substring(16)}",Toast.LENGTH_SHORT).show()
                     }
                 R.id.radio_3->
                     {
-                        radioOption=20
+                        radioOption=args.cash.optionThree
                         Toast.makeText(requireActivity(),"Вы выбрали ${radioOption} ${args.cash.title.substring(16)}",Toast.LENGTH_SHORT).show()
 
                     }
                 R.id.radio_4->
                      {
-                        radioOption=50
+                        radioOption=args.cash.optionFour
                          Toast.makeText(requireActivity(),"Вы выбрали ${radioOption} ${args.cash.title.substring(16)}",Toast.LENGTH_SHORT).show()
                     }
                 R.id.radio_5->
                      {
-                        radioOption=100
+                        radioOption=args.cash.optionFive
                          Toast.makeText(requireActivity(),"Вы выбрали ${radioOption} ${args.cash.title.substring(16)}",Toast.LENGTH_SHORT).show()
                     }
                 R.id.radio_6->
                     {
-                        radioOption=200
+                        radioOption=args.cash.optionSix
                         Toast.makeText(requireActivity(),"Вы выбрали ${radioOption} ${args.cash.title.substring(16)}",Toast.LENGTH_SHORT).show()
                     }
             }
             onRadioButtonClicked(radioGroup)
-            passValue(radioOption)
+            passValue(radioOption,currencyCharacter)
         }
 
         view.findViewById<Button>(R.id.btnCancel).setOnClickListener {
             findNavController().popBackStack()
         }
     }
-    override fun passValue(integer:Int) {
+     fun passValue(integer:Int,string: String) {
         val action = DetailsFragmentDirections.
-            fromDetailsToWithdrawOptions(integer)
+            fromDetailsToWithdrawOptions(integer,string)
         findNavController().navigate(action)
     }
 
     override fun passData(banknote: Banknote) {
+        TODO("Not yet implemented")
+    }
+
+    override fun passValue(integer: Int) {
         TODO("Not yet implemented")
     }
 

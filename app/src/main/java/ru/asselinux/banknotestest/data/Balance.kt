@@ -5,4 +5,7 @@ object Balance {
     fun checkBalance():Double{
         return BALANCE
     }
+    fun withdrawOperation(double: Double){
+        BALANCE-=double
+    }
 }

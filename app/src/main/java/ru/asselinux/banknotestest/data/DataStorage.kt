@@ -3,7 +3,12 @@ package ru.asselinux.banknotestest.data
 import ru.asselinux.banknotestest.R
 
 object DataStorage {
-
+    fun getCash(nameOfCurrency:String): List<Int> {
+        when(nameOfCurrency){
+            "EUR" -> return listOf()
+        }
+        return listOf<Int>(1,2,)
+    }
     fun getBanknotesList(): List<Banknote> {
         return listOf(
             Banknote(

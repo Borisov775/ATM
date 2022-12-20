@@ -4,12 +4,81 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
+        android:id="@+id/Yougotit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check_cash_1"
         android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:id="@+id/check_cash_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_cash_2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/Yougotit"
+        app:layout_constraintLeft_toLeftOf="@id/Yougotit"
+        app:layout_constraintRight_toRightOf="@id/Yougotit"
+        android:layout_marginTop="50dp"
+
+        />
+    <TextView
+        android:id="@+id/amount_in_cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cash_amount"
+        android:textSize="65sp"
+        android:textColor="@color/light_blue_900"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/check_cash_2"
+        app:layout_constraintTop_toBottomOf="@id/check_cash_2"
+        app:layout_constraintRight_toRightOf="@id/check_cash_2"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cash_type_quote"
+        app:layout_constraintLeft_toLeftOf="@id/check_cash_2"
+        app:layout_constraintBottom_toBottomOf="@id/typeX"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        />
+    <TextView
+        android:id="@+id/typeX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cash_type"
+        android:textSize="35sp"
+        android:textColor="@color/light_blue_900"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/check_cash_2"
+      android:layout_marginRight="30dp"
+        app:layout_constraintTop_toBottomOf="@id/amount_in_cash"
+
+        />
+    <Button
+        android:id="@+id/btnGetBalance_1"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/get_balance"
+        android:backgroundTint="#0A80F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

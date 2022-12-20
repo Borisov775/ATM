@@ -84,6 +84,9 @@
         <action
             android:id="@+id/action_withdrawOptions_to_checkCash"
             app:destination="@id/checkCash" />
+        <argument
+            android:name="currencyCharacter"
+            app:argType="string" />
     </fragment>
 
 
@@ -92,6 +95,16 @@
         android:id="@+id/checkCash"
         android:name="ru.asselinux.banknotestest.ui.CheckCash"
         tools:layout="@layout/check_cash"
-        android:label="CheckCash" />
+        android:label="CheckCash" >
+        <action
+            android:id="@+id/action_checkCash_to_balanceFragment"
+            app:destination="@id/balanceFragment" />
+        <argument
+            android:name="cash"
+            app:argType="string" />
+        <argument
+            android:name="cashType"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
