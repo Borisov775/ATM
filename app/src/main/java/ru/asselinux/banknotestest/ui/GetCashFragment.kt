@@ -50,5 +50,9 @@ class GetCashFragment : Fragment(R.layout.fragment_choose_currency), Transaction
             .actionGetCashFragmentToDetailsFragment(banknote)
         findNavController().navigate(action)
     }
+
+    override fun passValue(integer: Int) {
+        TODO("Not yet implemented")
+    }
 }
 

@@ -15,4 +15,8 @@
     <string name="string_show_balance">Текущий баланс:</string>
     <string name="string_ruble">100000.0 рублей</string>
     <string name="btn_back">Назад</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="witdraw_optionsQ">Choose the type of note you want to withdraw a cash: </string>
+    <string name="check_cash_1">Операция завершена </string>
 </resources>

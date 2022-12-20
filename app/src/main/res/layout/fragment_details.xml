@@ -44,7 +44,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="48dp"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +52,8 @@
             app:layout_constraintVertical_bias="0.272"
             tools:text="@tools:sample/cities" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroup_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="140dp"
@@ -64,14 +64,41 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
-                android:id="@+id/optionOne"
+                android:id="@+id/radio_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 tools:text="@tools:sample/cities" />
 
             <RadioButton
-                android:id="@+id/optionTwo"
+                android:id="@+id/radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+
+                tools:text="@tools:sample/cities" />
+
+            <RadioButton
+                android:id="@+id/radio_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+
+                tools:text="@tools:sample/cities" />
+
+            <RadioButton
+                android:id="@+id/radio_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+
+                tools:text="@tools:sample/cities" />
+
+            <RadioButton
+                android:id="@+id/radio_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -79,36 +106,13 @@
                 tools:text="@tools:sample/cities" />
 
             <RadioButton
-                android:id="@+id/optionThree"
+                android:id="@+id/radio_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:textSize="24sp"
-                tools:text="@tools:sample/cities" />
-
-            <RadioButton
-                android:id="@+id/optionFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textSize="24sp"
-                tools:text="@tools:sample/cities" />
-
-            <RadioButton
-                android:id="@+id/optionFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textSize="24sp"
-                tools:text="@tools:sample/cities" />
-
-            <RadioButton
-                android:id="@+id/optionSix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textSize="24sp"
-                tools:text="@tools:sample/cities" />
+                tools:text="@tools:sample/cities"
+                />
         </RadioGroup>
 
         <Button
@@ -121,7 +125,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup_1"
             app:layout_constraintVertical_bias="0.015" />
 
         <Button

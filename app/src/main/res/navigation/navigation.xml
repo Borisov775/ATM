@@ -35,6 +35,7 @@
         android:name="ru.asselinux.banknotestest.ui.GetCashFragment"
         android:label="Get cash"
         tools:layout="@layout/fragment_choose_currency">
+
         <action
             android:id="@+id/action_getCashFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -53,7 +54,13 @@
         tools:layout="@layout/fragment_details">
         <argument
             android:name="cash"
-            app:argType="ru.asselinux.banknotestest.data.Banknote" />
+            app:argType="ru.asselinux.banknotestest.data.Banknote"
+            />
+
+        <action
+            android:id="@+id/from_details_to_withdrawOptions"
+
+            app:destination="@id/withdrawOptions" />
     </fragment>
 
     <fragment
@@ -61,5 +68,30 @@
         android:name="ru.asselinux.banknotestest.ui.dialog.ProgressDialog"
         android:label="Loading"
         tools:layout="@layout/progress_dialog" />
+    <fragment android:id="@+id/placeholder" />
+
+
+
+    <fragment
+        android:id="@+id/withdrawOptions"
+        android:name="ru.asselinux.banknotestest.ui.WithdrawOptions"
+        android:label="WithdrawOptions"
+        tools:layout="@layout/options_money_withdraw">
+        <argument
+            android:name="radioOption"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_withdrawOptions_to_checkCash"
+            app:destination="@id/checkCash" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/checkCash"
+        android:name="ru.asselinux.banknotestest.ui.CheckCash"
+        tools:layout="@layout/check_cash"
+        android:label="CheckCash" />
 
 </navigation>

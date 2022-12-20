@@ -56,4 +56,5 @@ class BanknotesAdapter(
 
 interface Transaction {
     fun passData(banknote: Banknote)
+    fun passValue(integer: Int)
 }
