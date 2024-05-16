@@ -17,7 +17,7 @@
     <string name="btn_back">Назад</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="witdraw_optionsQ">Choose the type of note you want to withdraw a cash: </string>
+    <string name="witdraw_optionsQ">Выберите тип купюры, которую вам выдаст автомат: </string>
     <string name="check_cash_1">Операция успешна! </string>
     <string name="check_cash_2">Вы получили </string>
     <string name="cash_amount">50 €</string>

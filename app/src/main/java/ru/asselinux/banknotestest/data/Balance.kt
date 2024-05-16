@@ -5,7 +5,13 @@ object Balance {
     fun checkBalance():Double{
         return BALANCE
     }
-    fun withdrawOperation(double: Double){
-        BALANCE-=double
+    fun withdrawOperation(currencyName:String,double: Double){
+        when(currencyName){
+            "€"-> BALANCE-=double*73.70
+            "$"-> BALANCE-=double*69.45
+            "₽"-> BALANCE-=double
+            "WTF"-> BALANCE-=double*1000
+        }
+
     }
 }

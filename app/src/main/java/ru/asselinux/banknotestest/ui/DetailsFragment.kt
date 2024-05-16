@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import ru.asselinux.banknotestest.R
 import ru.asselinux.banknotestest.adapter.Transaction
+import ru.asselinux.banknotestest.data.Balance
 import ru.asselinux.banknotestest.data.Banknote
 import ru.asselinux.banknotestest.ui.dialog.ProgressDialog
 
@@ -17,6 +18,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details),Transaction {
     var currencyCharacter:String=""
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        view.findViewById<TextView>(R.id.balanceScore).text=Balance.BALANCE.toString()
         val title: TextView = view.findViewById(R.id.title)
 
         val radioGroup:RadioGroup=view.findViewById(R.id.radioGroup_1)
@@ -40,7 +42,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details),Transaction {
         view.findViewById<RadioButton>(R.id.radio_4).text = args.cash.optionFour.toString()
         view.findViewById<RadioButton>(R.id.radio_5).text = args.cash.optionFive.toString()
         view.findViewById<RadioButton>(R.id.radio_6).text = args.cash.optionSix.toString()
-        view.findViewById<TextView>(R.id.balance).text = args.cash.balance.toString()
+
 
 
 

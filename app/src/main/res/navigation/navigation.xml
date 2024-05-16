@@ -45,7 +45,11 @@
         android:id="@+id/balanceFragment"
         android:name="ru.asselinux.banknotestest.ui.BalanceFragment"
         android:label="Get balance"
-        tools:layout="@layout/fragment_balance" />
+        tools:layout="@layout/fragment_balance" >
+        <action
+            android:id="@+id/action_balanceFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/detailsFragment"
@@ -104,6 +108,12 @@
             app:argType="string" />
         <argument
             android:name="cashType"
+            app:argType="string" />
+        <argument
+            android:name="sum"
+            app:argType="integer" />
+        <argument
+            android:name="currencyName"
             app:argType="string" />
     </fragment>
 
